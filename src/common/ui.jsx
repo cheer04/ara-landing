@@ -113,7 +113,7 @@ export function PointPhoto({ src, points = [], onChange, limit = 2, label = 'Ð¤Ð
         <img src={asset(src)} alt={label} draggable="false" />
         <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
           <defs><marker id={marker} markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0 0L5 2.5L0 5" fill="none" stroke="currentColor" /></marker></defs>
-          {limit === 4 && <polygon points={points.map(({ x, y }) => `${x},${y}`).join(' ')} fill="#d4ad3360" stroke="currentColor" strokeWidth=".55" />}
+          {limit === 4 && <polygon points={points.map(({ x, y }) => `${x},${y}`).join(' ')} fill="currentColor" fillOpacity=".38" stroke="currentColor" strokeWidth=".55" />}
           {limit === 2 && points.length === 2 && <line x1={points[0].x} y1={points[0].y} x2={points[1].x} y2={points[1].y} stroke="currentColor" strokeWidth=".6" markerEnd={`url(#${marker})`} />}
           {points.map(({ x, y }, index) => <circle key={index} cx={x} cy={y} r="1" fill="currentColor" stroke="white" strokeWidth=".3" />)}
         </svg>

@@ -11,7 +11,7 @@
   --work-panel: #fff;
   --work-border: #d8d3c7;
   --work-blue: #dcecff;
-  --work-accent: #d4ad33;
+  --work-accent: var(--gold);
   --gold-interactive: #ffe66b;
   --work-role: #1c4068;
   --work-active: #2b3c53;

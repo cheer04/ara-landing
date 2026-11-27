@@ -167,7 +167,7 @@
 :where(#top) .workflow-image--qr { clip-path: inset(-5rem -1rem 0); }
 :where(#top) .workflow-image--qr .workflow-device { inset: -23% 0 auto auto; width: 59%; height: auto; }
 :where(#top) .guide-book { position: absolute; width: 62%; height: auto; top: 9%; left: 2%; transform: rotate(-11deg); }
-:where(#top) .workflow-copy { position: relative; padding: 1rem 1rem 1.5rem; border-radius: 0 0 1.5rem 1.5rem; background: linear-gradient(0deg, #79621a, transparent 21%), var(--navy); }
+:where(#top) .workflow-copy { position: relative; padding: 1rem 1rem 1.5rem; border-radius: 0 0 1.5rem 1.5rem; background: linear-gradient(0deg, color-mix(in srgb, var(--gold) 35%, var(--navy)), transparent 21%), var(--navy); }
 :where(#top) .workflow-copy p { font-size: 1.0625rem; line-height: 1.5; margin-top: .75rem; }
 :where(#top) .workflow-copy h3::after { content: ""; display: block; width: 7.8rem; height: 2px; margin-top: .75rem; background: var(--gold); }
 
@@ -192,18 +192,18 @@
 }
 :where(#top) .feature-promo video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: .9rem; background: #0c1524; }
 
-:where(#top) .about { overflow: clip; background: radial-gradient(ellipse 80% 22% at top, #bed3e6, transparent), radial-gradient(ellipse 80% 22% at bottom, #eadfb8, transparent), var(--cream); }
+:where(#top) .about { overflow: clip; background: radial-gradient(ellipse 80% 22% at top, #bed3e6, transparent), radial-gradient(ellipse 80% 22% at bottom, color-mix(in srgb, var(--gold) 25%, var(--cream)), transparent), var(--cream); }
 :where(#top) .about-route { margin-top: 1.25rem; display: grid; grid-template-columns: minmax(0, 1fr); }
 :where(#top) .about-route > * { grid-area: 1 / 1; }
 :where(#top) .about-content { display: grid; align-content: space-between; gap: clamp(2.5rem, 8svh, 5.5rem); }
 :where(#top) .about-row { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 0; }
 :where(#top) .about-row p { max-width: 39rem; }
-:where(#top) .about-row strong { color: #785b10; }
+:where(#top) .about-row strong { color: var(--ink); }
 :where(#top) .about-row:nth-of-type(2) p { grid-column: 2; grid-row: 1; }
-:where(#top) .route-line { align-self: center; width: 100%; height: auto; color: #ffb000; pointer-events: none; }
+:where(#top) .route-line { align-self: center; width: 100%; height: auto; color: var(--gold); pointer-events: none; }
 :where(#top) .route-line path { stroke: currentColor; stroke-width: 9; stroke-dasharray: 18 20; vector-effect: non-scaling-stroke; }
 :where(#top) .route-line > circle { fill: currentColor; stroke: var(--cream); stroke-width: 4; }
-:where(#top) .route-threads { stroke: #785b10; stroke-width: 1.5; }
+:where(#top) .route-threads { stroke: var(--gold); stroke-width: 1.5; }
 :where(#top) .route-tag { fill: #193858; }
 :where(#top) .route-tag-gold { fill: var(--gold); }
 :where(#top) .route-tag text { fill: var(--cream); font-size: 22px; font-weight: 650; }
@@ -229,7 +229,7 @@
   box-shadow: 0 10px 34px var(--plan-shadow);
 }
 :where(#top) .plan--start { --plan-glow: #b8dafa; --plan-shadow: #2a659cbd; }
-:where(#top) .plan--pro { --plan-glow: #f9df8b; --plan-shadow: #f7ae3ba6; }
+:where(#top) .plan--pro { --plan-glow: color-mix(in srgb, var(--gold) 45%, var(--white)); --plan-shadow: color-mix(in srgb, var(--gold) 65%, transparent); }
 :where(#top) .plan--company { --plan-glow: #253042; --plan-shadow: #27547dab; }
 :where(#top) .plan-action { margin-inline: calc(-1 * clamp(1rem, 2vw, 2rem)); padding: .65rem; text-align: center; background: var(--white); border-radius: var(--radius); box-shadow: 0 5px 12px #0002; }
 :where(#top) .plan-action .button { width: min(100%, 15.625rem); border-radius: 2rem; font-size: 1rem; background: #354052; }
@@ -240,8 +240,8 @@
 :where(#top) .plan-limit { text-align: center; font-size: 1.125rem; }
 :where(#top) .offers h2 { margin-bottom: 1.5rem; }
 :where(#top) .offer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2.1vw, 2.5rem); }
-:where(#top) .offer { display: grid; grid-template-rows: auto 1fr auto; padding: clamp(1.25rem, 2vw, 2.125rem); border-radius: var(--radius); background: linear-gradient(30deg, #e5d08b, transparent 30%), var(--cream); box-shadow: 0 3px 16px #0004; }
-:where(#top) .offer--dark { color: var(--cream); background: radial-gradient(ellipse at top right, #534926, transparent 52%), var(--navy); }
+:where(#top) .offer { display: grid; grid-template-rows: auto 1fr auto; padding: clamp(1.25rem, 2vw, 2.125rem); border-radius: var(--radius); background: linear-gradient(30deg, color-mix(in srgb, var(--gold) 40%, var(--cream)), transparent 30%), var(--cream); box-shadow: 0 3px 16px #0004; }
+:where(#top) .offer--dark { color: var(--cream); background: radial-gradient(ellipse at top right, color-mix(in srgb, var(--gold) 24%, var(--navy)), transparent 52%), var(--navy); }
 :where(#top) .offer p { margin-top: .5rem; font-size: 1.0625rem; line-height: 1.5; }
 :where(#top) .offer-actions { display: grid; justify-items: start; align-self: end; gap: 1rem; margin-top: 1.25rem; }
 :where(#top) .offer-actions .price { font-size: clamp(1.375rem, 1.75vw, 1.875rem); }

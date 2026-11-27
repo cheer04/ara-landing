@@ -59,7 +59,7 @@
 .work-chip { display: inline-block; padding: .18rem .65rem; border: 1px solid currentColor; border-radius: 2rem; font-size: .82rem; font-weight: 600; white-space: nowrap; }
 .work-chip--green { color: #17602d; background: #d8f8db; }
 .work-chip--blue { color: #174f89; background: #dcecff; }
-.work-chip--amber { color: #7b4b09; background: #fff0d0; }
+.work-chip--amber { color: var(--ink); background: color-mix(in srgb, var(--gold) 25%, var(--white)); }
 .work-chip--gray { color: #48505d; background: #eae8e5; }
 .work-error, .work-notice { margin-block: .75rem; padding: .65rem .8rem; border-radius: .35rem; }
 .work-error { color: var(--work-danger); background: var(--work-danger-bg); }
@@ -83,7 +83,7 @@
 .work-modal-actions { display: flex; flex-wrap: wrap; justify-content: end; gap: .65rem; margin-top: 1rem; padding-top: .85rem; border-top: 1px solid var(--work-border); }
 .point-editor { display: grid; gap: .6rem; align-content: start; justify-items: center; background: #e5f1ff; padding: .9rem; border-radius: .85rem; }
 .point-scroll { overflow: auto; width: 100%; }
-.point-photo { width: min(calc(100% * var(--photo-zoom, 1)), calc(18rem * var(--photo-zoom, 1))); position: relative; margin-inline: auto; color: #ffbe03; }
+.point-photo { width: min(calc(100% * var(--photo-zoom, 1)), calc(18rem * var(--photo-zoom, 1))); position: relative; margin-inline: auto; color: var(--gold); }
 .point-photo img { width: 100%; }
 .point-photo svg, .point-hit { position: absolute; inset: 0; width: 100%; height: 100%; }
 .point-hit { cursor: crosshair; }
