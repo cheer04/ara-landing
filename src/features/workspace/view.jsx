@@ -13,11 +13,11 @@ import Sessions from './sessions/view.jsx';
 import InstructionEditor from './instructions/editor/view.jsx';
 
 const sections = [
-  ['instructions', 'Инструкции', '▤'],
-  ['messages', 'Сообщения', '▣'],
-  ['models', 'Модели', '▥'],
-  ['analytics', 'Аналитика', '⌁'],
-  ['sessions', 'Журнал прохождений', '☷'],
+  ['instructions', 'Инструкции', 'M12 22H3V2h11l5 5v4M14 2v5h5M7 11h7M7 14h5M7 17h3M19 13v1m0 6v1m-4-4h1m6 0h1m-7-3 1 1m4 4 1 1m0-6-1 1m-4 4-1 1M21.5 17a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z'],
+  ['messages', 'Сообщения', 'M3 3h18a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-8l-6 4v-4H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1ZM7 8h10M7 12h6'],
+  ['models', 'Модели', 'M12 5h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2ZM7 6a2 2 0 0 0-1 2v8a2 2 0 0 0 1 2M3 8a2 2 0 0 0-1 2v4a2 2 0 0 0 1 2'],
+  ['analytics', 'Аналитика', 'm2 14 7-9 5 6 8-9M2 22h20'],
+  ['sessions', 'Журнал прохождений', 'M3 6h.01M3 12h.01M3 18h.01M8 6h13M8 12h13M8 18h13'],
 ];
 
 const go = path => { window.location.hash = path; };
@@ -92,7 +92,9 @@ export default function Workspace({ route, data, update, error }) {
       <div className="work-layout">
         <aside className="work-sidebar">
           <nav aria-label="Разделы кабинета">
-            {sections.map(([key, title, icon]) => <a key={key} aria-current={page === key ? 'page' : undefined} href={`#/demo/${key}`}><span aria-hidden="true">{icon}</span>{title}</a>)}
+            {sections.map(([key, title, iconPath]) => <a key={key} aria-current={page === key ? 'page' : undefined} href={`#/demo/${key}`}><svg className="work-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d={iconPath} />
+            </svg>{title}</a>)}
           </nav>
         </aside>
         <main className="work-main" data-section={page}>

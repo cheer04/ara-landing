@@ -13,7 +13,17 @@
 .work-sidebar nav { display: grid; gap: .25rem; }
 .work-sidebar a { color: var(--white); display: flex; gap: .65rem; align-items: center; border-left: 3px solid transparent; padding: .72rem .65rem; text-decoration: none; border-radius: .5rem; }
 .work-sidebar a:hover, .work-sidebar a[aria-current] { background: var(--work-active); border-left-color: var(--work-accent); }
-.work-sidebar a[aria-current] span { color: var(--work-accent); }
+.work-nav-icon {
+  flex: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.work-sidebar a[aria-current] .work-nav-icon { color: var(--work-accent); }
 .work-main { padding: clamp(1.25rem, 2.8vw, 2.5rem); min-width: 0; }
 .work-main a:not(.work-button) { color: var(--ink); }
 .work-main:is([data-section="models"], [data-section="analytics"]) a { text-decoration: none; }
