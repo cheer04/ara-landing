@@ -1,0 +1,20 @@
+:root {
+  --ink: #1b263b;
+  --navy: #192438;
+  --blue: #2a6cb1;
+  --cream: #f5f1e7;
+  --white: #fdfdfd;
+  --gold: #ffd400;
+  --muted: #606b7d;
+  --work-sidebar: #192438;
+  --work-page: #f5f1e7;
+  --work-panel: #fff;
+  --work-border: #d8d3c7;
+  --work-blue: #dcecff;
+  --work-accent: #d4ad33;
+  --gold-interactive: #ffe66b;
+  --work-role: #1c4068;
+  --work-active: #2b3c53;
+  --work-danger: #841717;
+  --work-danger-bg: #ffe2e2;
+}

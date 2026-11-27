@@ -1,0 +1,6 @@
+.work-message { padding: .8rem; border: 1px solid var(--work-border); border-radius: .4rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .4rem .8rem; text-decoration: none; }
+.work-message:hover, .work-message[aria-current] { background: var(--work-blue); }
+.work-message > span:last-child { flex-basis: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.work-inbox { width: min(100%, 52rem); }
+.work-inbox .work-panel { min-height: 17rem; }

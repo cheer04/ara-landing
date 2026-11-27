@@ -1,0 +1,17 @@
+.guide-page { min-height: 100dvh; display: grid; justify-items: center; align-content: start; background: #e1e9f2; padding: clamp(.6rem, 3vw, 2.5rem); }
+.guide-phone { width: min(100%, 24rem); margin-inline: auto; background: var(--work-page); border: 4px solid var(--work-sidebar); border-radius: 1.35rem; overflow: hidden; }
+.guide-header { display: flex; justify-content: space-between; align-items: center; gap: .5rem; padding: .5rem .85rem; color: white; background: var(--work-sidebar); }
+.guide-header img { width: 3.25rem; }
+.guide-body { display: grid; gap: .85rem; padding: 1rem; }
+.guide-body h1, .guide-body h2 { font-size: 1.35rem; }
+.guide-body h3 { font-size: 1rem; }
+.guide-body h2 + p, .guide-body h3 + p { margin-top: 0; }
+.guide-body > .work-button { justify-self: start; }
+.guide-phone .point-photo { width: 100%; }
+.guide-label { color: var(--muted); font-size: .88rem; }
+.guide-note { border: 1px solid var(--work-border); border-radius: .45rem; padding: .65rem; }
+.guide-note > .work-actions { margin-top: .55rem; }
+.guide-warning { background: #f0dfaa; }
+.guide-link { background: white; text-underline-offset: .2em; }
+.guide-model-photo { width: 100%; height: 11rem; object-fit: contain; }
+

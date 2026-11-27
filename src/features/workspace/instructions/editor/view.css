@@ -1,0 +1,7 @@
+.work-views { display: flex; flex-wrap: wrap; gap: 1rem; }
+.work-view { display: grid; align-content: start; gap: .6rem; padding: .7rem; width: min(100%, 16rem); border: 1px solid var(--work-border); border-radius: .55rem; }
+.work-view img { width: 100%; height: 8rem; object-fit: contain; background: var(--work-blue); }
+.work-step { display: flex; justify-content: space-between; align-items: center; gap: .8rem; padding: .65rem 0; border-bottom: 1px solid var(--work-border); }
+.work-step p { color: var(--muted); }
+.work-preview-options { margin-bottom: .8rem; justify-content: center; }
+.work-preview-small { max-width: 19rem; margin-inline: auto; }

@@ -1,0 +1,4 @@
+.work-model-link { display: inline-flex; align-items: center; gap: .75rem; }
+.work-model-link img { width: 3.5rem; height: 3.5rem; object-fit: cover; border-radius: .3rem; }
+.work-model-photo { width: min(100%, 14rem); max-height: 17rem; object-fit: contain; border-radius: .5rem; }
+.work-qr svg { display: block; max-width: 100%; }

@@ -1,0 +1,32 @@
+.workspace, .guide-page, .work-modal { color: var(--ink); }
+.workspace { min-height: 100vh; background: var(--work-page); }
+.work-header {
+  min-height: 5rem;
+  padding: .4rem clamp(1rem, 4vw, 4rem);
+  background: var(--work-sidebar);
+  color: var(--cream);
+}
+.work-header img { width: 5rem; }
+.work-role { padding: .35rem .9rem; background: var(--work-role); border-radius: 2rem; }
+.work-layout { display: grid; grid-template-columns: 13.75rem minmax(0, 1fr); min-height: calc(100vh - 5rem); }
+.work-sidebar { background: var(--work-sidebar); color: var(--cream); padding: 1rem .65rem; }
+.work-sidebar nav { display: grid; gap: .25rem; }
+.work-sidebar a { display: flex; gap: .65rem; align-items: center; border-left: 3px solid transparent; padding: .72rem .65rem; text-decoration: none; border-radius: .5rem; }
+.work-sidebar a:hover, .work-sidebar a[aria-current] { background: var(--work-active); border-left-color: var(--work-accent); }
+.work-sidebar a[aria-current] span { color: var(--work-accent); }
+.work-main { padding: clamp(1.25rem, 2.8vw, 2.5rem); min-width: 0; }
+.work-main h1 { font-size: clamp(1.65rem, 2.65vw, 2.4rem); }
+.work-main h2, .work-modal h2 { font-size: 1.4rem; }
+.work-main h3, .work-modal h3 { font-size: 1.1rem; }
+@media (max-width: 60rem) {
+  .work-layout { grid-template-columns: 12rem minmax(0, 1fr); }
+  .work-main { padding: 1.2rem; }
+}
+@media (max-width: 48rem) {
+  .work-layout { grid-template-columns: 1fr; }
+  .work-sidebar nav { display: flex; flex-wrap: wrap; }
+  .work-header { flex-wrap: wrap; }
+}
+.work-role select { font: inherit; color: white; background: var(--work-role); border: none; margin-left: .3rem; }
+
+.work-avatar { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; color: var(--ink); background: var(--work-accent); }

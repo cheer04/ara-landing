@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Tilda Sans VF";
+  src: url("/fonts/TildaSans-VF.ttf") format("truetype");
+  font-weight: 250 900;
+  font-display: swap;
+}
+
+.ara-app {
+  background: var(--white);
+  color: var(--ink);
+  font: 1rem / 1.5 "Tilda Sans VF", "Segoe UI", Arial, sans-serif;
+}
+:where(.ara-app) :where(a) { color: inherit; }
+:where(.ara-app) :where(img) { display: block; max-width: 100%; }
+:where(.ara-app) :where(h1, h2, h3, p, figure) { margin: 0; }
+:where(.ara-app) :where(h1, h2, h3) { line-height: 1.14; }
+.ara-app :focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+.ara-app .dark :focus-visible { outline-color: var(--gold); }
