@@ -11,10 +11,13 @@
 .work-layout { display: grid; grid-template-columns: 13.75rem minmax(0, 1fr); min-height: calc(100vh - 5rem); }
 .work-sidebar { background: var(--work-sidebar); color: var(--cream); padding: 1rem .65rem; }
 .work-sidebar nav { display: grid; gap: .25rem; }
-.work-sidebar a { display: flex; gap: .65rem; align-items: center; border-left: 3px solid transparent; padding: .72rem .65rem; text-decoration: none; border-radius: .5rem; }
+.work-sidebar a { color: var(--white); display: flex; gap: .65rem; align-items: center; border-left: 3px solid transparent; padding: .72rem .65rem; text-decoration: none; border-radius: .5rem; }
 .work-sidebar a:hover, .work-sidebar a[aria-current] { background: var(--work-active); border-left-color: var(--work-accent); }
 .work-sidebar a[aria-current] span { color: var(--work-accent); }
 .work-main { padding: clamp(1.25rem, 2.8vw, 2.5rem); min-width: 0; }
+.work-main a:not(.work-button) { color: var(--ink); }
+.work-main:is([data-section="models"], [data-section="analytics"]) a { text-decoration: none; }
+.work-instruction-title { text-decoration: none; }
 .work-main h1 { font-size: clamp(1.65rem, 2.65vw, 2.4rem); }
 .work-main h2, .work-modal h2 { font-size: 1.4rem; }
 .work-main h3, .work-modal h3 { font-size: 1.1rem; }

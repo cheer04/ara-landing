@@ -26,7 +26,7 @@ export default function InstructionList({ instructions, models, onCreate }) {
       <Table columns={['Название', 'Модель', 'Тип', 'Статус', 'Автор', 'Изменено']} rows={rows.map(item => ({
         id: item.id,
         cells: [
-          <a href={`#/demo/instructions/${item.id}`}>{item.title || 'Без названия'}</a>,
+          <a className="work-instruction-title" href={`#/demo/instructions/${item.id}`}>{item.title || 'Без названия'}</a>,
           models.find(entry => entry.id === item.modelId)?.code ?? '—', item.type, <Chip value={item.status} />, 'Гость', date(item.updated),
         ],
       }))} empty="Инструкции не найдены" />

@@ -95,7 +95,7 @@ export default function Workspace({ route, data, update, error }) {
             {sections.map(([key, title, icon]) => <a key={key} aria-current={page === key ? 'page' : undefined} href={`#/demo/${key}`}><span aria-hidden="true">{icon}</span>{title}</a>)}
           </nav>
         </aside>
-        <main className="work-main">
+        <main className="work-main" data-section={page}>
           {error && <p className="work-error" role="alert">{error}</p>}
           {screen}
         </main>

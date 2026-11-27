@@ -60,6 +60,7 @@
   background: transparent;
 }
 :where(#top) .landing-header .site-header { width: min(97rem, calc(100% - 1.55 * var(--gutter))); }
+:where(#top) .landing-header a, :where(#top) .site-footer a, :where(#top) .contact-card { color: var(--white); }
 :where(#top) .landing-main, :where(#top) .landing-main :is([id], :focus-visible) {
   scroll-margin-top: calc(var(--landing-header-height, 5rem) + .75rem);
 }
@@ -246,24 +247,26 @@
 :where(#top) .offer-actions .price { font-size: clamp(1.375rem, 1.75vw, 1.875rem); }
 :where(#top) .offer-actions .button { font-size: 1rem; min-height: 2.75rem; }
 
-:where(#top) .contact-layout { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem clamp(2rem, 9.5vw, 8.5rem); margin-top: 1.25rem; }
+:where(#top) .contact-layout { display: flex; flex-wrap: wrap; align-items: stretch; justify-content: space-evenly; gap: 2rem 1rem; margin-top: 1.25rem; }
 :where(#top) .contact-layout figure { text-align: center; }
 :where(#top) .portrait { width: 12rem; height: auto; margin: 0 auto 1.25rem; border-radius: 2rem; box-shadow: 0 0 .45rem var(--gold); }
 :where(#top) figcaption span { display: block; color: var(--gold); }
 :where(#top) .contact-card {
   display: grid;
   justify-items: center;
-  align-content: start;
-  width: min(100%, 15.75rem);
+  align-content: center;
+  box-sizing: border-box;
+  width: min(100%, 12rem);
   padding: 1.3rem 1.25rem;
+  overflow-wrap: anywhere;
   border-radius: 1.65rem;
   background: repeating-radial-gradient(ellipse at 18% 90%, transparent 0 1.15rem, #294a70 1.2rem 1.3rem, transparent 1.35rem 1.8rem), #142b48;
   text-decoration: none;
-  font-size: .875rem;
+  font-size: 1rem;
 }
 :where(#top) .contact-card:hover { text-decoration: underline; }
-:where(#top) .contact-card img { width: 9.7rem; height: auto; }
-:where(#top) .vk-mark { display: grid; place-items: center; width: 1.25rem; height: 1.25rem; margin-block: 1rem .5rem; border-radius: .3rem; background: #0077ff; color: white; font: bold .68rem / 1 Arial, sans-serif; }
+:where(#top) .contact-card img { width: min(100%, 9.7rem); height: auto; }
+:where(#top) .vk-mark { display: grid; place-items: center; width: 1.75rem; height: 1.75rem; margin-block: 1rem .5rem; border-radius: .3rem; background: #0077ff; color: white; font: bold .9rem / 1 Arial, sans-serif; }
 :where(#top) .site-footer { padding-block: var(--section-space); color: var(--cream); background: var(--navy); }
 :where(#top) .site-footer .site-header { background: transparent; align-items: start; padding: 0 clamp(1rem, 7.5vw, 6.6rem) 0 clamp(0rem, 2.5vw, 2.25rem); }
 :where(#top) .site-footer nav { padding-top: .35rem; }
