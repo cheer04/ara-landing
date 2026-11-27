@@ -62,7 +62,6 @@ function Workflow() {
       <section className="workflow-section" id="how">
         <div className="landing-container section" data-reveal>
           <ParrotOutline className="workflow-mark" />
-          <p className="eyebrow">Всего три шага</p>
           <h2>Как «Ара» работает для вашего бренда</h2>
           <p className="section-intro muted">Покупатели получают пошаговые подсказки под вашим брендом, а ваша команда видит, где им нужна помощь.</p>
           <div className="grid-three workflow">
@@ -98,8 +97,7 @@ function Features() {
           <img className="feature-phone" src={image('feature-phone')} alt="" width="1742" height="3609" loading="lazy" />
         </div>
         <figure className="feature-promo">
-          <figcaption id="promo-title">Проморолик проекта «Ара»</figcaption>
-          <video aria-labelledby="promo-title" controls playsInline preload="metadata" width="1920" height="1080">
+          <video aria-label="Проморолик проекта «Ара»" controls playsInline preload="metadata" width="1920" height="1080">
             <source src={promoUrl} type="video/mp4" />
             <a href={promoUrl}>Открыть проморолик</a>
           </video>
@@ -109,29 +107,55 @@ function Features() {
   );
 }
 
+function RouteTag({ label }) {
+  return (
+    <>
+      <polygon points="-18,0 14,-30 248,-30 248,30 14,30" />
+      <circle className="route-tag-hole" r="5" />
+      <text x="126" y="0" textAnchor="middle" dominantBaseline="central">{label}</text>
+    </>
+  )
+}
+
 function About() {
   return (
     <section className="about" id="about">
       <div className="landing-container section" data-reveal>
         <h2>О проекте</h2>
         <div className="about-route">
-          <svg className="route-line" viewBox="0 0 1250 720" preserveAspectRatio="none" fill="none" aria-hidden="true" focusable="false">
+          <svg className="route-line" viewBox="0 0 1250 720" preserveAspectRatio="xMidYMid meet" fill="none" aria-hidden="true" focusable="false">
             <path d="M809 35C807 159 767 236 660 235S330 254 330 404s126 163 236 163 243 42 243 128" />
+            <g className="route-threads">
+              <line x1="809" y1="35" x2="915" y2="95" />
+              <line x1="330" y1="404" x2="272" y2="435" />
+              <line x1="809" y1="695" x2="915" y2="645" />
+            </g>
             <circle cx="809" cy="35" r="12" />
             <circle cx="330" cy="404" r="12" />
             <circle cx="809" cy="695" r="12" />
+            <g className="route-tag" transform="translate(915 95) rotate(16)">
+              <RouteTag label="Доступ к инструкции" />
+            </g>
+            <g className="route-tag route-tag-gold" transform="translate(272 435) rotate(169)">
+              <RouteTag label="Пошаговая помощь" />
+            </g>
+            <g className="route-tag" transform="translate(915 645) rotate(-16)">
+              <RouteTag label="Аналитика бренда" />
+            </g>
           </svg>
-          <div className="about-row">
-            <p><strong>Ара</strong> — платформа интерактивных руководств для производителей бытовой техники. Мы превращаем привычные инструкции в удобные пошаговые сценарии, которые помогают покупателям самостоятельно разобраться с устройством и решить возникающие проблемы.</p>
-            <span className="tag">Доступ к инструкции</span>
-          </div>
-          <div className="about-row">
-            <p>Вместо поиска информации в объёмных руководствах пользователь получает понятные подсказки прямо на смартфоне. А производитель может отслеживать прохождение инструкций, выявлять сложные этапы и узнавать, с какими трудностями сталкиваются владельцы его техники.</p>
-            <span className="tag">Пошаговая помощь</span>
-          </div>
-          <div className="about-row">
-            <p><strong>Наша цель</strong> — сделать взаимодействие с техникой проще, сократить нагрузку на службы поддержки и помочь брендам принимать решения на основе действий пользователей.</p>
-            <span className="tag">Аналитика бренда</span>
+          <div className="about-content">
+            <div className="about-row">
+              <p><strong>Ара</strong> — платформа интерактивных руководств для производителей бытовой техники. Мы превращаем привычные инструкции в удобные пошаговые сценарии, которые помогают покупателям самостоятельно разобраться с устройством и решить возникающие проблемы.</p>
+              <span className="tag">Доступ к инструкции</span>
+            </div>
+            <div className="about-row">
+              <p>Вместо поиска информации в объёмных руководствах пользователь получает понятные подсказки прямо на смартфоне. А производитель может отслеживать прохождение инструкций, выявлять сложные этапы и узнавать, с какими трудностями сталкиваются владельцы его техники.</p>
+              <span className="tag"><span>Пошаговая помощь</span></span>
+            </div>
+            <div className="about-row">
+              <p><strong>Наша цель</strong> — сделать взаимодействие с техникой проще, сократить нагрузку на службы поддержки и помочь брендам принимать решения на основе действий пользователей.</p>
+              <span className="tag">Аналитика бренда</span>
+            </div>
           </div>
         </div>
       </div>
@@ -162,7 +186,7 @@ function Pricing() {
 
 function Offers() {
   return (
-    <section className="landing-container section offers" id="offers" aria-labelledby="offers-title">
+    <section className="landing-container section offers" id="offers" data-reveal aria-labelledby="offers-title">
       <h2 id="offers-title">Спецпредложения</h2>
       <div className="offer-grid">
         <article className="offer offer--dark">
@@ -182,7 +206,7 @@ function Offers() {
 
 function Apply({ onRequest }) {
   return (
-    <section className="landing-container section request-panel" id="request" tabIndex={-1} aria-labelledby="request-title">
+    <section className="landing-container section request-panel" id="request" data-reveal tabIndex={-1} aria-labelledby="request-title">
       <h2 id="request-title">Оставьте заявку</h2>
       <p>Оставьте нам свои контакты для связи и обсуждения сотрудничества</p>
       <div className="request-layout">
@@ -202,7 +226,7 @@ function Apply({ onRequest }) {
 function Contact() {
   return (
     <section id="contact">
-      <div className="landing-container section">
+      <div className="landing-container section" data-reveal>
         <h2>Контакты лидера</h2>
         <p>Свяжитесь с лидером проекта для обсуждения сотрудничества</p>
         <div className="contact-layout">
@@ -247,13 +271,22 @@ export default function App({ onRequest }) {
     const observer = new IntersectionObserver(entries => {
       for (const entry of entries) {
         if (!entry.isIntersecting) continue;
-        entry.target.classList.add('section-revealed');
+        entry.target.classList.replace('section-pending', 'section-revealed');
         observer.unobserve(entry.target);
       }
-    }, { rootMargin: '0px 0px -48px' });
+    });
 
-    main.current.querySelectorAll('[data-reveal]').forEach(section => observer.observe(section));
-    return () => observer.disconnect();
+    const sections = main.current.querySelectorAll('[data-reveal]');
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top < window.innerHeight) continue;
+      section.classList.add('section-pending');
+      observer.observe(section);
+    }
+
+    return () => {
+      observer.disconnect();
+      sections.forEach(section => section.classList.remove('section-pending', 'section-revealed'));
+    };
   }, []);
 
   return (
