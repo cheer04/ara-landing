@@ -109,11 +109,11 @@
   text-wrap: balance;
 }
 :where(#top) .hero h1 span { display: block; }
-:where(#top) .hero-intro { max-width: 31rem; margin-top: 1.15rem; font-size: clamp(1.125rem, 1.55vw, 1.375rem); line-height: 1.4; }
+:where(#top) .hero-intro { max-width: 31rem; margin-top: 1.15rem; padding-block: .5rem; font-size: clamp(1.125rem, 1.55vw, 1.375rem); line-height: 1.4; }
 :where(#top) .hero .actions { margin-top: clamp(1.5rem, 6svh, 4rem); gap: .85rem; }
 :where(#top) .hero .button { min-height: 3.375rem; padding-inline: clamp(1.1rem, 2vw, 1.9rem); }
 :where(#top) .hero-note { margin-top: clamp(1.5rem, 6svh, 4rem); font-size: .875rem; text-transform: uppercase; font-weight: 600; }
-:where(#top) .hero-image { width: 100%; height: auto; }
+:where(#top) .hero-image { width: 100%; height: auto; scale: 1.12; }
 
 @media (prefers-reduced-motion: no-preference) {
   :where(#top) .button { transition: transform 150ms ease-out; }
@@ -247,7 +247,7 @@
 :where(#top) .offer-actions .price { font-size: clamp(1.375rem, 1.75vw, 1.875rem); }
 :where(#top) .offer-actions .button { font-size: 1rem; min-height: 2.75rem; }
 
-:where(#top) .contact-layout { display: flex; flex-wrap: wrap; align-items: stretch; justify-content: space-evenly; gap: 2rem 1rem; margin-top: 1.25rem; }
+:where(#top) .contact-layout { display: flex; flex-wrap: wrap; align-items: stretch; justify-content: space-evenly; gap: 2rem 1rem; margin-top: 3rem; }
 :where(#top) .contact-layout figure { text-align: center; }
 :where(#top) .portrait { width: 12rem; height: auto; margin: 0 auto 1.25rem; border-radius: 2rem; box-shadow: 0 0 .45rem var(--gold); }
 :where(#top) figcaption span { display: block; color: var(--gold); }
